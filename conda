@@ -1,0 +1,6 @@
+git init
+conda create --name hellovenv python
+source activate hellovenv
+source deactivate
+
+also useful: http://conda.pydata.org/docs/_downloads/conda-pip-virtualenv-translator.html
