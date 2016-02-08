@@ -1,11 +1,12 @@
-<!doctype html>
-<html>
-<head>
-  <title>I am a Django God</title>
-</head>
-<body>
-  <h1>Delusions of Grandeur</h1>
-  <p>They make life EXCITING</p>
-
-</body>
-</html>
+{% extends 'layouts/base.html' %}
+{% load humanize %}
+{% block title %}I am a Django God - {{ block.super }}{% endblock %}
+{% block content %}
+  <h1>Delusions of Grandeur #{{ munber }}</h1>
+  <p>They make life EXCITING for {{ thing }}.</p>
+  <p>{% if munber %}Number exists!{% else %}booooo{% endif %}</p>
+  <p>
+    There are {{ munber }} dog{{ munber|pluralize }} and {{ single|apnumber }}
+    ocelot{{ single|pluralize }}.
+  </p>
+{% endblock %}
