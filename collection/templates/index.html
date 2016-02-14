@@ -9,4 +9,10 @@
     There are {{ munber }} dog{{ munber|pluralize }} and {{ single|apnumber }}
     ocelot{{ single|pluralize }}.
   </p>
+  <h1>These are the things:</h1>
+  {% for nacho in things %}
+  <h2>{{ nacho.name }}</h2>
+  <p>{{ nacho.description }}</p>
+  {% endfor %}
+  OIC: {{ uno.name}}<br />
 {% endblock %}

@@ -1,10 +1,16 @@
 from django.shortcuts import render
+from collection.models import Thing
 
 # Create your views here.
 def index(request):
     munber = 6
+    thing = "Thinnged Nam"
+    things = Thing.objects.all()
+    thing_one = Thing.objects.get(name="thing one")
     return render(request, 'index.html', {
         'munber': munber,
         'single': 1,
-        'thing': 'velvet worms',
+        'thing': thing,
+        'things':things,
+        'uno': thing_one,
     })
