@@ -7,10 +7,12 @@ def index(request):
     thing = "Thinnged Nam"
     things = Thing.objects.all()
     thing_one = Thing.objects.get(name="thing one")
+    things_named_thing = Thing.objects.filter(name__contains='thing').order_by('?')
     return render(request, 'index.html', {
         'munber': munber,
         'single': 1,
         'thing': thing,
         'things':things,
         'uno': thing_one,
+        'things_named_thing': things_named_thing,
     })

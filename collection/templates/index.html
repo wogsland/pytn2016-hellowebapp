@@ -15,4 +15,9 @@
   <p>{{ nacho.description }}</p>
   {% endfor %}
   OIC: {{ uno.name}}<br />
+  <h1>These are the things named thing:</h1>
+  {% for nacho in things_named_thing %}
+  <h2>{{ nacho.name }}</h2>
+  <p>{{ nacho.description }}</p>
+  {% endfor %}
 {% endblock %}
