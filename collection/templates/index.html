@@ -20,4 +20,13 @@
   <h2>{{ nacho.name }}</h2>
   <p>{{ nacho.description }}</p>
   {% endfor %}
+  <h1>These are the links to the things:</h1>
+  {% for nacho in things %}
+  <h2>
+    <a href="{% url 'thing_detail' slug=nacho.slug %}">
+      {{ nacho.name }}
+    </a>
+  </h2>
+  <p>{{ nacho.description }}</p>
+  {% endfor %}
 {% endblock %}

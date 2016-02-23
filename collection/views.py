@@ -16,3 +16,11 @@ def index(request):
         'uno': thing_one,
         'things_named_thing': things_named_thing,
     })
+
+def thing_detail(request, slug):
+    # grab the object...
+    thing = Thing.objects.get(slug=slug)
+    # and pass to the template
+    return render(request, 'things/thing_detail.html', {
+        'thing': thing,
+    })
